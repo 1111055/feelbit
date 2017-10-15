@@ -13,7 +13,7 @@
 
 
 
-Auth::routes();
+//Auth::routes();
 
 // Dashboard
 Route::get('/', 'HomeController@index');
