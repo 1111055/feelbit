@@ -2,7 +2,7 @@
 <html lang="en">
 @include('include.head')
 <body>
-@include('include.navbar')
+
 
 
     @yield('content')
