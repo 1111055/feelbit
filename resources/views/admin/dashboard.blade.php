@@ -131,11 +131,11 @@
                 <div class="row">
     
                 <div class="section-title">
-                <h1>Our Recent Works</h1>
+                <h1>Os trabalhos mais recentes.</h1>
                 </div>
         
         
-            <ul class="grid cs-style-3">
+            <!--ul class="grid cs-style-3">
                 <div class="col-md-4 col-sm-6">
                     <figure>
                         <img src="img/portfolio/4.jpg" alt="img04">
@@ -196,7 +196,7 @@
                         </figcaption>
                     </figure>
                 </div>
-            </ul>
+            </ul-->
                 </div>
             </div>
         </div>
@@ -209,7 +209,7 @@
             <div class="container">
             
                 <div class="section-title">
-                <h1>Our Success Stories</h1>
+                <h1>Parceiros de Sucesso!</h1>
                 </div>
 
                 <div class="clients-logo-wrapper text-center row">
