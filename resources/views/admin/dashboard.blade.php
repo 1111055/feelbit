@@ -11,7 +11,7 @@
                 <li data-target="#main-slider" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="item" style="background-image: url(http://fakeimg.pl/250x100/)">
+                <div class="item" style="background-image: url(http://fakeimg.pl/1920x700/)">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 </div><!--/.item-->
-                <div class="item" style="background-image: url(http://fakeimg.pl/250x100/)">
+                <div class="item" style="background-image: url(http://fakeimg.pl/1920x700/)">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div><!--/.item-->
-                <div class="item" style="background-image: url(http://fakeimg.pl/250x100/)">
+                <div class="item" style="background-image: url(http://fakeimg.pl/1920x700/)">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
@@ -127,7 +127,7 @@
             <ul class="grid cs-style-3">
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                        <img src="img/portfolio/4.jpg" alt="img04">
+                        <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
                             <h3>Settings</h3>
                             <span>Jacob Cummings</span>
@@ -137,7 +137,7 @@
                 </div>  
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                        <img src="img/portfolio/1.jpg" alt="img01">
+                      <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
                             <h3>Camera</h3>
                             <span>Jacob Cummings</span>
@@ -147,7 +147,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                        <img src="img/portfolio/2.jpg" alt="img02">
+                        <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
                             <h3>Music</h3>
                             <span>Jacob Cummings</span>
@@ -157,7 +157,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                        <img src="img/portfolio/5.jpg" alt="img05">
+                        <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
                             <h3>Safari</h3>
                             <span>Jacob Cummings</span>
@@ -167,7 +167,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                        <img src="img/portfolio/3.jpg" alt="img03">
+                        <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
                             <h3>Phone</h3>
                             <span>Jacob Cummings</span>
@@ -177,7 +177,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                        <img src="img/portfolio/6.jpg" alt="img06">
+                        <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
                             <h3>Game Center</h3>
                             <span>Jacob Cummings</span>
