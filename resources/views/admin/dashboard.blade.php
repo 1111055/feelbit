@@ -115,9 +115,9 @@
                     <figure>
                         <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
-                            <h3>Settings</h3>
-                            <span>Jacob Cummings</span>
-                            <a href="portfolio-item.html">Take a look</a>
+                            <h3>Design</h3>
+                            <span>Empresa YY</span>
+                            <a href="#">Ver Mais</a>
                         </figcaption>
                     </figure>
                 </div>  
@@ -125,9 +125,9 @@
                     <figure>
                       <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
-                            <h3>Camera</h3>
-                            <span>Jacob Cummings</span>
-                            <a href="portfolio-item.html">Take a look</a>
+                            <h3>Web Site</h3>
+                            <span>Empresa YY</span>
+                            <a href="#">Ver Mais</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -135,9 +135,9 @@
                     <figure>
                         <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
-                            <h3>Music</h3>
-                            <span>Jacob Cummings</span>
-                            <a href="portfolio-item.html">Take a look</a>
+                            <h3>Design</h3>
+                            <span>Empresa YY</span>
+                            <a href="#">Ver Mais</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -145,9 +145,9 @@
                     <figure>
                         <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
-                            <h3>Safari</h3>
-                            <span>Jacob Cummings</span>
-                            <a href="portfolio-item.html">Take a look</a>
+                            <h3>APP</h3>
+                            <span>Empresa YY</span>
+                            <a href="#">Ver Mais</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -155,9 +155,9 @@
                     <figure>
                         <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
-                            <h3>Phone</h3>
-                            <span>Jacob Cummings</span>
-                            <a href="portfolio-item.html">Take a look</a>
+                            <h3>Android</h3>
+                            <span>Empresa YY</span>
+                            <a href="#">Ver Mais</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -165,9 +165,9 @@
                     <figure>
                         <img src="http://fakeimg.pl/280x175/">
                         <figcaption>
-                            <h3>Game Center</h3>
-                            <span>Jacob Cummings</span>
-                            <a href="portfolio-item.html">Take a look</a>
+                            <h3>APP Web</h3>
+                            <span>Empresa YY</span>
+                            <a href=#">Ver Mais</a>
                         </figcaption>
                     </figure>
                 </div>
