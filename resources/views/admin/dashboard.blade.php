@@ -11,7 +11,7 @@
                 <li data-target="#main-slider" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="item active" style="background-image: url(img/slides/1.jpg)">
+                <div class="item" style="background-image: url(http://fakeimg.pl/250x100/)">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 </div><!--/.item-->
-                <div class="item" style="background-image: url(img/slides/2.jpg)">
+                <div class="item" style="background-image: url(http://fakeimg.pl/250x100/)">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div><!--/.item-->
-                <div class="item" style="background-image: url(img/slides/3.jpg)">
+                <div class="item" style="background-image: url(http://fakeimg.pl/250x100/)">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
