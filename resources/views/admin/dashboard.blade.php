@@ -16,8 +16,8 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="carousel-content centered">
-                                    <h2 class="animation animated-item-1">Welcome to BASICA! A Bootstrap3 Template</h2>
-                                    <p class="animation animated-item-2">Sed mattis enim in nulla blandit tincidunt. Phasellus vel sem convallis, mattis est id, interdum augue. Integer luctus massa in arcu euismod venenatis. </p>
+                                    <h2 class="animation animated-item-1">Teste Escrito</h2>
+                                    <p class="animation animated-item-2">SLorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae euismod lacus. Maecenas in tempor lectus. Nam mattis, odio ut dapibus ornare, libero. </p>
                                 </div>
                             </div>
                         </div>
@@ -28,8 +28,8 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="carousel-content center centered">
-                                    <h2 class="animation animated-item-1">Powerful and Responsive HTML Template</h2>
-                                    <p class="animation animated-item-2">Phasellus adipiscing felis a dictum dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at ligula risus. </p>
+                                    <h2 class="animation animated-item-1">Lorem ipsum dolor sit amet</h2>
+                                    <p class="animation animated-item-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae euismod lacus. Maecenas in tempor lectus. Nam mattis, odio ut dapibus ornare, libero. Donec at ligula risus. </p>
                                     <br>
                                     <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
                                 </div>
@@ -42,7 +42,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="carousel-content centered">
-                                    <h2 class="animation animated-item-1">Works Seamlessly Well on All Devices</h2>
+                                    <h2 class="animation animated-item-1">Lorem ipsum dolor sit amet</h2>
                                     <p class="animation animated-item-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae euismod lacus. Maecenas in tempor lectus. Nam mattis, odio ut dapibus ornare, libero. </p>
                                     <br>
                                     <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
@@ -61,21 +61,7 @@
         </a>
     </section><!--/#main-slider-->
 
-    
-        <!-- Call to Action Bar -->
-        <div class="section section-dark">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="calltoaction-wrapper">
-                            <h3>Welcome to <span style="color:#aec62c; text-transform:uppercase;font-size:24px;">Basica!</span> A free fully responsive Bootstrap 3 HTML5 template!</h3> <a href="http://www.vactualart.com/portfolio-item/basica-a-free-html5-template/" class="btn btn-orange">Download here!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Call to Action Bar -->
-
+   
 
         <!-- Services -->
         <div class="section section-white">
