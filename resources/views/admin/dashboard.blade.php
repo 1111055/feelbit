@@ -124,7 +124,7 @@
                 </div>
         
         
-            <!--ul class="grid cs-style-3">
+            <ul class="grid cs-style-3">
                 <div class="col-md-4 col-sm-6">
                     <figure>
                         <img src="img/portfolio/4.jpg" alt="img04">
@@ -185,7 +185,7 @@
                         </figcaption>
                     </figure>
                 </div>
-            </ul-->
+            </ul>
                 </div>
             </div>
         </div>
@@ -202,18 +202,18 @@
                 </div>
 
                 <div class="clients-logo-wrapper text-center row">
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-1.jpg" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-2.jpg" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-3.jpg" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-4.jpg" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-5.jpg" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-6.jpg" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-7.jpg" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-8.jpg" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-9.jpg" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-10.jpg" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-11.jpg" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/logo-12.jpg" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/200x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
                 </div>
             </div>
         </div>
