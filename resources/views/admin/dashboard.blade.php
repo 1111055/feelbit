@@ -11,17 +11,7 @@
                 <li data-target="#main-slider" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="item active" style="background-image: url(http://fakeimg.pl/1920x700/)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content centered">
-                                    <h2 class="animation animated-item-1">Teste Escrito</h2>
-                                    <p class="animation animated-item-2">SLorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae euismod lacus. Maecenas in tempor lectus. Nam mattis, odio ut dapibus ornare, libero. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="item active" style="background-image: url(imagens/banner1.jpg)">
                 </div><!--/.item-->
                 <div class="item" style="background-image: url(http://fakeimg.pl/1920x700/)">
                     <div class="container">
@@ -86,7 +76,7 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="service-wrapper">
                             <i class="icon-calendar"></i>
-                            <h3>Markting Digial</h3>
+                            <h3>Markting Digital</h3>
                             <p>Phasellus posuere et nisl ac commodo. Nulla facilisi. Sed tincidunt bibendum cursus. Aenean vulputate aliquam risus rutrum scelerisque</p>
                             <a href="#" class="btn">Ver Mais</a>
                         </div>
@@ -192,7 +182,7 @@
                     <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
                     <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
                     <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/200x100/" alt="Client Name"></a></div>
+                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
                     <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
                     <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
                     <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="http://fakeimg.pl/100x100/" alt="Client Name"></a></div>
