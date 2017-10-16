@@ -70,25 +70,25 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="service-wrapper">
                             <i class="icon-home"></i>
-                            <h3>Aliquam in adipiscing</h3>
+                            <h3>Web Design</h3>
                             <p>Praesent rhoncus mauris ac sollicitudin vehicula. Nam fringilla turpis turpis, at posuere turpis aliquet sit amet condimentum</p>
-                            <a href="#" class="btn">Read more</a>
+                            <a href="#" class="btn">Ver Mais</a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="service-wrapper">
                             <i class="icon-briefcase"></i>
-                            <h3>Curabitur mollis</h3>
+                            <h3>Design</h3>
                             <p>Suspendisse eget libero mi. Fusce ligula orci, vulputate nec elit ultrices, ornare faucibus orci. Aenean lectus sapien, vehicula</p>
-                            <a href="#" class="btn">Read more</a>
+                            <a href="#" class="btn">Ver Mais</a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="service-wrapper">
                             <i class="icon-calendar"></i>
-                            <h3>Vivamus mattis</h3>
+                            <h3>Markting Digial</h3>
                             <p>Phasellus posuere et nisl ac commodo. Nulla facilisi. Sed tincidunt bibendum cursus. Aenean vulputate aliquam risus rutrum scelerisque</p>
-                            <a href="#" class="btn">Read more</a>
+                            <a href="#" class="btn">Ver Mais</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
             <ul class="grid cs-style-3">
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                        <img src="http://fakeimg.pl/280x175/">
+                        <img src="http://fakeimg.pl/1200x750/">
                         <figcaption>
                             <h3>Design</h3>
                             <span>Empresa YY</span>
@@ -123,7 +123,7 @@
                 </div>  
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                      <img src="http://fakeimg.pl/280x175/">
+                      <img src="http://fakeimg.pl/1200x750/">
                         <figcaption>
                             <h3>Web Site</h3>
                             <span>Empresa YY</span>
@@ -133,7 +133,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                        <img src="http://fakeimg.pl/280x175/">
+                        <img src="http://fakeimg.pl/1200x750/">
                         <figcaption>
                             <h3>Design</h3>
                             <span>Empresa YY</span>
@@ -143,7 +143,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                        <img src="http://fakeimg.pl/280x175/">
+                        <img src="http://fakeimg.pl/1200x750/">
                         <figcaption>
                             <h3>APP</h3>
                             <span>Empresa YY</span>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                        <img src="http://fakeimg.pl/280x175/">
+                        <img src="http://fakeimg.pl/1200x750/">
                         <figcaption>
                             <h3>Android</h3>
                             <span>Empresa YY</span>
@@ -163,7 +163,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <figure>
-                        <img src="http://fakeimg.pl/280x175/">
+                        <img src="http://fakeimg.pl/1200x750/">
                         <figcaption>
                             <h3>APP Web</h3>
                             <span>Empresa YY</span>
