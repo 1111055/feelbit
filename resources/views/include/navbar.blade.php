@@ -7,13 +7,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="imagens/logo3.jpg" alt="Basica"></a>
+                <a class="navbar-brand" href="#"><img src="imagens/logo3.jpg" alt="FeelBit"></a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">Sobre nós</a></li>
-                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Portfólio</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Serviços <i class="icon-angle-down"></i></a>
                         <ul class="dropdown-menu">
