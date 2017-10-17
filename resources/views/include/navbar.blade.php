@@ -28,7 +28,7 @@
                             <li><a href="#">Termos e Condições</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact-us.html">Contactos</a></li>
+                    <li><a href="#">Contactos</a></li>
                 </ul>
             </div>
         </div>
