@@ -11,7 +11,7 @@
                 <li data-target="#main-slider" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="item active" style="background-image: url(imagens/banner2.png)">
+                <div class="item active" style="background-image: url(imagens/banner3.png)">
                 </div><!--/.item-->
                 <div class="item" style="background-image: url(http://fakeimg.pl/1920x700/)">
                     <div class="container">
