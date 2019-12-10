@@ -22,7 +22,12 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
-
+    /**
+     * Where to redirect users after registration.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -53,22 +58,18 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return User
+     * @return \App\User
      */
     protected function create(array $data)
     {
-      dd(request()->all());
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+        $user = User::create([
+          'name'     => $data['name'],
+          'email'    => $data['email'],
+          'password' => bcrypt($data['password']),
         ]);
-    }
-
-    public function store()
-    {
-        dd(request()->all());
-
-
+        $user
+           ->roles()
+           ->attach(Role::where('name', 'employee')->first());
+        return $user;
     }
 }

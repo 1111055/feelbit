@@ -4,14 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-use App\Vehicle;
-use App\TypeUser;
-use Excel;
-use Input;
-use PDF;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\DB;
-
+use Image;
+use File;
+use App\RuleUser;
+use App\Role;
 
 class UserController extends Controller
 {
@@ -20,9 +18,8 @@ class UserController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-       // $this->middleware('admin');
-        $this->middleware('colaborador');
     }
+
 
     /**
      * Display a listing of the resource.
@@ -32,17 +29,9 @@ class UserController extends Controller
     public function index()
     {
 
-      // $users  = DB::table('users')->paginate(1);
-       $users = User::orderBy('name')
-           ->where('activo','1')
-           ->where('onchange','0')->paginate(10);
-           
+          $users = User::all();
 
-    //   dd($users);
-
-
-        return view('utilizadores.index', compact('users'));
-    
+          return view('backend.User.index',compact('users'));
     }
 
     /**
@@ -52,36 +41,9 @@ class UserController extends Controller
      */
     public function create()
     {
-         $type  = TypeUser::all()->where('id','<>',1);
-         $typeu = $type->pluck('typedesc','id');
-         return view('utilizadores.create',compact('typeu'));
+        //
     }
 
-    public function export()
-    {
-
-        $data = User::select('id', 'name', 'email', 'created_at as criado em','updated_at as actualizado em','contact as contacto','number as numero mecanografico')
-            ->where('typeuser', '<>', 1)
-            ->get();
-
-        return Excel::create('utilizadores', function($excel) use ($data) {
-            $excel->sheet('folha', function($sheet) use ($data)
-            {
-                $sheet->fromArray($data);
-            });
-        })->export('xlsx');
-    }
-
-    public function pdf(){
-
-        $users = User::
-            where('typeuser', '<>', 1)
-            ->get();
-
-        $pdf = PDF::loadView('utilizadores.pdf', ['users' => $users] );
-        return $pdf->download('utilizadores.pdf');
-
-    }
 
 
     /**
@@ -93,13 +55,8 @@ class UserController extends Controller
     public function store(UserRequest $request)
     {
 
-        //dd($request->all());
         $request->persist();
-
-        return redirect()->route('users.index')->with('sucess','Colaborador criado com sucesso.');
-
-
-
+        return redirect()->route('user')->with('sucess','Criado com sucesso.');
     }
 
     /**
@@ -110,9 +67,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::find($id);
-      // $alertas = $user->alerts;
-        return view('utilizadores.show',compact('user','alertas'));
+        //
     }
 
     /**
@@ -121,12 +76,19 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function editar($id)
+    public function edit($id)
     {
-        $user = User::find($id);
-        $type  = TypeUser::all()->where('id','<>',1);
-        $typeu = $type->pluck('typedesc','id');
-        return view('utilizadores.edit',compact('user','typeu'));
+          $user = User::find($id);
+
+          $roles = RuleUser::
+                 where('user_id', '=', $id)->get();
+
+
+          $role = Role::all();
+
+          $selrole  = $role->pluck('name','id');
+          $selroles = $roles->pluck('role_id');
+          return view('backend.User.edit', compact('user','selrole','selroles'));
     }
 
     /**
@@ -138,25 +100,128 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::find($id);
-     //   dd($request);
-        $this->validate($request,[
-            'name' => 'required',
-            'contact' => 'required',
-            'number' => 'required',
-            'email' => 'required',
-            ]);
+         $user = User::findOrFail($id);
 
-        $user->name=$request->name;
-        $user->contact=$request->contact;
-        $user->number=$request->number;
-        $user->email=$request->email;
-       $user->typeuser=$request->typeuser;
+
+         $lastid = $id;
+         $imagename;
+         $_path = $user->path;
+
+        if($request->hasFile('banerimg')) {
+                       
+            
+                        $photo = $request->file('banerimg');
+                       
+                        //Nome Do Ficheiro
+                        $filenamewithextension = $request->file('banerimg')->getClientOriginalName();
+                 
+                        //Nome Sem Extensão 
+                        $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+                 
+                        //Extenção do ficheiro
+                        $extension = $request->file('banerimg')->getClientOriginalExtension();
+                 
+                        //Novo nome do ficheiro
+                        $imagename = "user_".$lastid.'.'.$photo->getClientOriginalExtension(); 
+
+                        $data = getimagesize($photo);
+                        $width = $data[0];
+                        $height = $data[1];
+
+                        $namepng = "user_".$lastid.'.png';
+                        $namejgp = "user_".$lastid.'.jpg';
+                        $namegif = "user_".$lastid.'.gif';
+                        $nametiff = "user_".$lastid.'.tiff';
+
+                 
+                        if(file_exists(public_path('/logotipo/User/'.$namepng))){
+
+                              unlink(public_path('/logotipo/User/'.$namepng));
+
+                        }
+                       if(file_exists(public_path('/logotipo/User/'.$namejgp))){
+
+                              unlink(public_path('/logotipo/User/'.$namejgp));
+
+                        }
+                        if(file_exists(public_path('/logotipo/User/'.$namegif))){
+
+                              unlink(public_path('/logotipo/User/'.$namegif));
+
+                        }
+                        if(file_exists(public_path('/logotipo/User/'.$nametiff))){
+
+                              unlink(public_path('/logotipo/User/'.$nametiff));
+
+                        }
+
+    
+                        //Upload File                     
+                      //  $file = $request->file('banerimg')->storeAs('User', $imagename, 'upload');
+                        
+                        
+                       // crop image
+
+                        $destinationPath = public_path('/logotipo/User/');
+                        $thumb_img = Image::make($photo->getRealPath());
+                    
+                        if(file_exists(public_path('/logotipo/User/'.$imagename))){
+
+                              unlink(public_path('/logotipo/User/'.$imagename));
+
+                        }
+
+                        $altura =   $height;
+                        $comprimento = $width;
+
+                        $divisaoalt = 160 / $altura; 
+                        $divisaocom = 160 / $comprimento;
+
+                        if($divisaoalt < $divisaocom){
+                            $altfinal = $altura * $divisaoalt;
+                            $cmpfinal = $comprimento * $divisaoalt;
+                        }else{
+                            $altfinal = $altura * $divisaocom;
+                            $cmpfinal = $comprimento * $divisaocom;
+
+                        }
+                        $_path = $request->root().'/logotipo/User/'.$imagename;
+                        // Resized image
+                        $thumb_img->resize($cmpfinal, $altfinal, function ($constraint) {
+                            $constraint->aspectRatio();
+                        });
+                        // Canvas image
+                        $canvas = Image::canvas(160, 160);
+                        $canvas->insert($thumb_img, 'center');
+                        $canvas->save($destinationPath.'/'.$imagename,50);
+                                    
+      }
+
+        if(count($request->acessos) > 0){
+
+              $roles = RuleUser::
+                 where('user_id', '=', $id)->get();
+                 
+                  DB::table('role_user')->where('user_id', $id)->delete(); 
+
+                 //dd($request->acessos);
+                 foreach ($request->acessos as $key => $value) {
+
+                       $role_manager  = Role::where('id', $value)->first();
+                       $user->roles()->attach($role_manager);
+                    
+                 } 
+
+        }
+        //dd($request->all());
+        $user->name        = $request->name;
+        $user->path        = $_path;
+        $user->activo      = $request->has('activo') && $request->activo !== '' ? 1 : 0;
 
         $user->save();
 
-        return redirect()->route('users.show',$user->id)->with('sucess','Colaborador Actualizado com sucesso.');
-
+       
+         return redirect()->route('user.edit', compact('user'))->with('sucess','Guardado com sucesso.');
     }
 
     /**
@@ -167,8 +232,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        User::destroy($id);
+         User::destroy($id);
 
-        return redirect()->route('users.index')->with('sucess','colaborador removido com sucesso!');
+         return redirect()->route('user')->with('sucess','Removido com sucesso.');
     }
 }

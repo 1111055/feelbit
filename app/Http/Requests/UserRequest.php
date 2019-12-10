@@ -4,8 +4,10 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use App\User;
+
 class UserRequest extends FormRequest
 {
+    
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -25,54 +27,26 @@ class UserRequest extends FormRequest
     {
         return [
 
-
-            'name' => 'required',
-            'email' => 'required|email',
-            'contact' => 'required',
-            'number' => 'required',
-            'password' => 'required|confirmed',
-            'password_confirmation' => 'required',
-            'typeuser' => 'required',
-
+            'name'  => 'required',
+            'email' => 'required|unique:users'
         ];
 
     }
-    public function messages()
-    {
+   public function messages()
+   {
         return [
-
-            'password.confirmed'  => 'PassWord Nao Corresponde!',
-            'modelo.email' => 'ERRO EMAIL',
-            //
-
-            'required' => "ERRO: Falta preencher :attribute"
+            'required' => "ERRO: Falta preencher :attribute",
+            'unique'   => "ERRO: Já existe campo :attribute"
         ];
-    }
-
+   }
+    
     public function persist(){
 
-       // dd(request->all());
-      //  dd(request()->all());
-        // User::create(
-        //     request()->all()
-        // );
-
-        User::create([
-            'name' => request()->name,
-            'email' => request()->email,
-            'contact' => request()->contact,
-            'number' => request()->number,
-            'password' => bcrypt(request()->password),
-            'typeuser' => request()->typeuser,
+       User::create([
+            'name'        => request()->name,
+            'email'       => request()->email,
+            'password'    => bcrypt(request()->password)
+            
         ]);
     }
-
-    public function persistUpdate(){
-
-
-        User::create(
-            request()->all()
-        );
-    }
-
 }

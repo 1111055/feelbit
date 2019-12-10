@@ -4,13 +4,10 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
     use Notifiable;
-    
-
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','contact','number','vehicle','activo', 'onchange','typeuser'
+        'name', 'email', 'password','path'
     ];
 
     /**
@@ -30,25 +27,46 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function carro()
+    public function roles()
     {
-        return $this->hasOne('App\Vehicle','colaborador');
+      return $this->belongsToMany('App\Role');
     }
 
     /**
-     * Get the alerts for the user.
-     */
-    public function alerts()
+    * @param string|array $roles
+    */
+    public function authorizeRoles($roles)
     {
-        return $this->hasMany('App\Alert','colaborador');
+      if (is_array($roles)) {
+          return $this->hasAnyRole($roles) || 
+                 abort(403, 'Unauthorized action.');
+      }
+      return $this->hasRole($roles) || 
+             abort(403, 'Unauthorized action.');
     }
 
-    public function role()
+    public function isinrule($roles)
     {
-        return $this->hasOne('App\TypeUser','id','typeuser');
+
+      if (is_array($roles)) {
+          return $this->hasAnyRole($roles);
+      }
+
     }
-
-
-
-
+    /**
+    * Check multiple roles
+    * @param array $roles
+    */
+    public function hasAnyRole($roles)
+    {
+      return null !== $this->roles()->whereIn('name', $roles)->first();
+    }
+    /**
+    * Check one role
+    * @param string $role
+    */
+    public function hasRole($role)
+    {
+      return null !== $this->roles()->where('name', $role)->first();
+    }
 }
