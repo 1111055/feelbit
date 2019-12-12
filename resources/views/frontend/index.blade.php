@@ -64,18 +64,13 @@
 
 				<div class="row centered">
 					<div id="logo-carousel" class="fade-up">
-						<div class="item">
-							<img src="{{asset('image/logo/1.png')}}" alt="">
-						</div>
-						<div class="item">
-							<img src="{{asset('image/logo/2.png')}}" alt="">
-						</div>
-						<div class="item">
-							<img src="{{asset('image/logo/3.png')}}" alt="">
-						</div>
-						<div class="item">
-							<img src="{{asset('image/logo/4.png')}}" alt="">
-						</div>
+						 @isset($bannerline[1])
+		                     @foreach($bannerline[1] as $key => $item)
+		                           <div class="item">
+		                           	  <a href="{{$item->link}}"><img src="{{$item->path}}"  alt="" /></a>
+							       </div>
+		                     @endforeach
+		                 @endisset
 					</div>
 				</div>
 			</div>
@@ -128,7 +123,7 @@
 			</div><!-- container -->
 		</div><!-- Call to action -->
 		
-		<div class="container">
+		<div class="container" id="contact-us">
 			<div class="row mt">
 	        	<div class="centered gap fade-down section-heading">
 	                <h2 class="main-title">{{$exp[2]['expression']}}</h2>
@@ -137,7 +132,7 @@
 	            </div>
 			</div><!-- row -->
 		</div><!-- container -->
-		<div class="container" id="contact-us">
+		<div class="container">
 			<div class="row gap">
 				<div class="fade-up col-md-6 fade-up">
 					<p>{{$exp[4]['expression']}}</p>
@@ -147,25 +142,26 @@
 					<div id="message"></div>
 					<form method="post" id="contact-form" class="contact-form">
 						<input name="_token" id="_token" type="hidden" value="{{csrf_token()}}">
-						<p><input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" /></p>
+						<p><input type="text" class="form-control" name="nome" id="nome" placeholder="Nome *" /></p>
 						<div class="col-md-12">
                     
                              <div class="alert alert-danger" role="alert" id="erronome" style="display: none;"></div>
                  
                         </div>
-						<p><input type="text" class="form-control" name="email" id="email" placeholder="Email" /></p>
+						<p><input type="text" class="form-control" name="email" id="email" placeholder="Email *" /></p>
 						<div class="col-md-12">
 
                              <div class="alert alert-danger" role="alert" id="erroemail" style="display: none;"></div>
 
                         </div>
-						<p><input type="text" class="form-control" name="website" id="website" placeholder="Website" /></p>
-						<p><textarea name="subject" class="form-control" id="subject" placeholder="Discrição"></textarea></p>
-				    	<div class="col-md-12">
+						<p><input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto *" /></p>
+						<div class="col-md-12">
                         
-                             <div class="alert alert-danger" role="alert" id="erroemail" style="display: none;"></div>
+                             <div class="alert alert-danger" role="alert" id="erroassunto" style="display: none;"></div>
                          
                         </div>
+						<p><textarea name="desc" class="form-control" id="desc" placeholder="Discrição"></textarea></p>
+						<p>{{$exp[8]['expression']}}</p>
 						<input class="btn btn-outlined btn-primary" type="submit" name="submit" id="sendcontact" value="Enviar" />
 					     <div class="fa-3x" style="display: none;" id="loaderorca">
                             <i class="fa fa-spinner fa-pulse" style="margin-left: 50%;"></i>

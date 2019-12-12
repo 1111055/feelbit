@@ -613,7 +613,7 @@ $( "#contact-form" ).submit(function( event ) {
             }, 2000);
    }
 
-   if(nome === "" && erro == false){
+   if(assunto === "" && erro == false){
 
       erro = true;
       $form.find( "input[name='subject']" ).focus();
@@ -785,6 +785,9 @@ $( "#searchForm" ).submit(function( event ) {
                 $("input[name='email']").focus();
                 $("#alerterro").fadeIn();
                 $("#alerterro").html("<p> Erro - Email já existente. </p>");
+               setTimeout(function(){
+                   $("#alerterro").fadeOut();
+                }, 2000);
             }
           });
 

@@ -99,7 +99,7 @@ class BannerLinesController extends Controller
 
         if($request->hasFile('banerimg')) {
                        
-            
+                            dd("Teste");
                         $photo = $request->file('banerimg');
                        
                       //  dd($photo);
@@ -128,24 +128,24 @@ class BannerLinesController extends Controller
                         $nametiff = "banner_".$request->idbanner.'_'.$lastid.'.tiff';
 
                  
-                        if(file_exists(public_path('/Banners/'.$namepng))){
+                        if(file_exists(base_path('/Banners/'.$namepng))){
 
-                              unlink(public_path('/Banners/'.$namepng));
-
-                        }
-                       if(file_exists(public_path('/Banners/'.$namejgp))){
-
-                              unlink(public_path('/Banners/'.$namejgp));
+                              unlink(base_path('/Banners/'.$namepng));
 
                         }
-                        if(file_exists(public_path('/Banners/'.$namegif))){
+                       if(file_exists(base_path('/Banners/'.$namejgp))){
 
-                              unlink(public_path('/Banners/'.$namegif));
+                              unlink(base_path('/Banners/'.$namejgp));
 
                         }
-                        if(file_exists(public_path('/Banners/'.$nametiff))){
+                        if(file_exists(base_path('/Banners/'.$namegif))){
 
-                              unlink(public_path('/Banners/'.$nametiff));
+                              unlink(base_path('/Banners/'.$namegif));
+
+                        }
+                        if(file_exists(base_path('/Banners/'.$nametiff))){
+
+                              unlink(base_path('/Banners/'.$nametiff));
 
                         }
 
@@ -155,19 +155,19 @@ class BannerLinesController extends Controller
                         
                        // crop image
 
-                        $destinationPath = public_path('/Banners/CROP');
+                        $destinationPath = base_path('/Banners/CROP');
                         $thumb_img = Image::make($photo->getRealPath());
                     
-                        if(file_exists(public_path('/Banners/CROP/'.$imagename))){
+                        if(file_exists(base_path('/Banners/CROP/'.$imagename))){
 
-                              unlink(public_path('/Banners/CROP/'.$imagename));
+                              unlink(base_path('/Banners/CROP/'.$imagename));
 
                         }
 
                         $altura =   $height;
                         $comprimento = $width;
 
-
+                        dd("Teste");
 
                         $divisaoalt = $bn->height / $altura; 
                         $divisaocom = $bn->width / $comprimento;

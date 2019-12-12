@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Newsletter;
 use App\Http\Requests\NewsletterRequest;
+use App\Mail\NovaNewsletter;
+use Mail;
 
 class NewsletterController extends Controller
 {
@@ -60,6 +62,8 @@ class NewsletterController extends Controller
         $exist = Newsletter::where('email','=',$email)->get();
         if( count($exist) < 1){
 
+         
+          Mail::to($email)->cc("marcomendes0202@hotmail.com")->send(new NovaNewsletter($request));
           $request->persist();
           return response()
             ->json(['done' => '1']);

@@ -39,14 +39,13 @@ class ContactoRequest extends FormRequest
     }
     
     public function persist(){
-   
 
-       //dd(request()->telefone);
-
+       
        Contacto::create([
             'nome'       => request()->nome,
             'email'      => request()->email,
-            'assunto'    => request()->subject
+            'assunto'    => request()->subject,
+            'message'    => request()->desc
         ]);
     }
 }

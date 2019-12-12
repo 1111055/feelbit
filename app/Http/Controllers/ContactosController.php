@@ -18,9 +18,8 @@ class ContactosController extends Controller
     public function index()
     {
 
-       $contact = Pagina::find(3);
-
-        return view('frontend.contactos', compact('contact'));
+        $contactos = Contacto::get();
+        return view('backend.Contactos.index', compact('contactos'));
     }
 
     /**
@@ -44,9 +43,11 @@ class ContactosController extends Controller
 
 
           $request->persist();
-         // Mail::to($request->email)->cc("marcomendes0202@hotmail.com")->send(new NovoContacto($request));
+          Mail::to($request->email)->cc("marcomendes0202@hotmail.com")->send(new NovoContacto($request));
+
+         
           return response()
-            ->json(['done' => '1']);
+            ->json(['done' => 1]);
     }
 
     /**
@@ -57,7 +58,8 @@ class ContactosController extends Controller
      */
     public function show($id)
     {
-        //
+          $contactos = Contacto::find($id);
+        return view('backend.Contactos.show', compact('contactos'));
     }
 
     /**

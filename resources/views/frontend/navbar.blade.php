@@ -12,7 +12,7 @@
 			  @foreach($menu as $test) 
 	                  
                 <li>
-					<a href="{{$test['path']}}">
+					<a href="#{{$test['path']}}">
 						<span class="icon">
 							<i aria-hidden="true" class="{{$test['link']}}"></i>
 						</span>

@@ -8,7 +8,7 @@ Acusa-mos a recepção do seu pedido de contacto. <br><br>
 </center>
 
 <center>
-A equipa Ibero Brinde agradeçe o seu interesse, brevemente receberá noticias nossas. <br><br>
+A equipa Feel Bit agradeçe o seu interesse, brevemente receberá noticias nossas. <br><br>
 </center>
 
 Os seus dados:
@@ -17,24 +17,21 @@ Nome: {{$data->nome}}
 <hr>
 Email: {{$data->email}}
 <hr>
-Telefone/Telemovel: {{$data->telefone}}
+Assunto: {{$data->subject}}
 <hr>
-
-
-@component('mail::button', ['url' => 'https://iberobrinde.com'])
-Ibero Brinde
-@endcomponent
+Descrição: {{$data->desc}}
+<hr>
 
 <br><br>
 
 
 <center>
-<strong>Teste Mensagem</strong> 
+<strong>Até já.</strong> 
 </center>
 
 <br><br>
 
 
-www.iberobrinde.com<br>
-{{ config('app.name') }}
+www.feelbit.pt<br>
+Feel Bit
 @endcomponent

@@ -34,8 +34,8 @@ Route::get('about', 'AboutController@index');
 Route::get('about', 'AboutController@index')->name('about');
 
 //Contactos Company
-Route::get('contactos', 'ContactosController@index');
 Route::get('contactos', 'ContactosController@index')->name('contactos');
+Route::get('contactos/show/{id}',     ['as' => 'contactos.show',    'uses' => 'ContactosController@show']); 
 Route::post('contactos', 'ContactosController@store');
 
 //Checkout Products

@@ -28,13 +28,28 @@ class HomeController extends Controller
       
      
       $pagina = Pagina::find(1);
+      $banner = PageBanner::getBannerFormPage(1);
+                
+      foreach ($banner as $key => $value) {
 
-    
+                $_banner = Banner::find($value->id);
+               
+               if($_banner != null){
+                    if($_banner->activo == 1){
+
+                      $bannerline[] = BannerLine::getBannerHome($value->id);
+
+                       
+                    }
+                
+               }
+      }
+
    
       $paginas = Pagina::where('nome','!=',' ')->orderby("ordem","asc")->get();
 
 
-       return view('frontend.index',compact('pagina','paginas'));
+       return view('frontend.index',compact('pagina','paginas','bannerline'));
     }
 
 

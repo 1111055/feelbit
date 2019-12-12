@@ -94,9 +94,9 @@ class BannerLineRequest extends FormRequest
                         $height = $data[1];
 
                  
-                        if(file_exists(public_path('/Banners/'.$imagename))){
+                        if(file_exists(base_path('/Banners/'.$imagename))){
 
-                              unlink(public_path('/Banners/'.$imagename));
+                              unlink(base_path('/Banners/'.$imagename));
 
                         }
     
@@ -106,12 +106,12 @@ class BannerLineRequest extends FormRequest
                         
                        // crop image
 
-                        $destinationPath = public_path('/Banners/CROP');
+                        $destinationPath = base_path('/Banners/CROP');
                         $thumb_img = Image::make($photo->getRealPath());
                     
-                        if(file_exists(public_path('/Banners/CROP/'.$imagename))){
+                        if(file_exists(base_path('/Banners/CROP/'.$imagename))){
 
-                              unlink(public_path('/Banners/CROP/'.$imagename));
+                              unlink(base_path('/Banners/CROP/'.$imagename));
 
                         }
 
