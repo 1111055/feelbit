@@ -132,12 +132,14 @@
                                           @else                       
                                           <td class="text-center"><i class="fa fa-times-circle"></i></td>
                                           @endif   
-                                          <td><a href="{{route('menu.edit',$item->id)}}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a> 
+                                          <td><div class="col-xs-1"><a href="{{route('menu.edit',$item->id)}}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a></div>
+                                          <div class="col-xs-1"> 
                                             @if(Auth::user()->isinrule(['supermaster']))
                                               {{ Form::open(['route' => ['menu.destroy', $item->id], 'method' => 'delete']) }}
                                               <button type="submit" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
                                               {{ Form::close() }}
                                             @endif  
+                                          </div>
 
                                           </td>
                                         </tr>

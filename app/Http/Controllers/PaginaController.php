@@ -135,48 +135,48 @@ class PaginaController extends Controller
                         $nametiff = "banner_home.tiff";
 
                  
-                        if(file_exists(public_path('/img/'.$namepng))){
+                        if(file_exists(base_path('/image/'.$namepng))){
 
-                              unlink(public_path('/img/'.$namepng));
-
-                        }
-                       if(file_exists(public_path('/img/'.$namejgp))){
-
-                              unlink(public_path('/img/'.$namejgp));
+                              unlink(base_path('/image/'.$namepng));
 
                         }
-                        if(file_exists(public_path('/img/'.$namegif))){
+                       if(file_exists(base_path('/image/'.$namejgp))){
 
-                              unlink(public_path('/img/'.$namegif));
+                              unlink(base_path('/image/'.$namejgp));
 
                         }
-                        if(file_exists(public_path('/img/'.$nametiff))){
+                        if(file_exists(base_path('/image/'.$namegif))){
 
-                              unlink(public_path('/img/'.$nametiff));
+                              unlink(base_path('/image/'.$namegif));
+
+                        }
+                        if(file_exists(base_path('/image/'.$nametiff))){
+
+                              unlink(base_path('/image/'.$nametiff));
 
                         }
 
     
                         //Upload File                     
-                        $file = $request->file('banerimg')->storeAs('img', $imagename, 'upload');
+                        $file = $request->file('banerimg')->storeAs('image', $imagename, 'upload');
                         
                         
                        // crop image
 
-                        $destinationPath = public_path('/img/CROP');
+                        $destinationPath = base_path('/image/CROP');
                         $thumb_img = Image::make($photo->getRealPath());
                     
-                        if(file_exists(public_path('/img/CROP/'.$imagename))){
+                        if(file_exists(base_path('/image/CROP/'.$imagename))){
 
-                              unlink(public_path('/img/CROP/'.$imagename));
+                              unlink(base_path('/image/CROP/'.$imagename));
 
                         }
 
                         $altura =   $height;
                         $comprimento = $width;
 
-                        $divisaoalt = 240 / $altura; 
-                        $divisaocom = 870 / $comprimento;
+                        $divisaoalt = 1447 / $altura; 
+                        $divisaocom = 2048 / $comprimento;
 
                         if($divisaoalt < $divisaocom){
                             $altfinal = $altura * $divisaoalt;
@@ -186,15 +186,15 @@ class PaginaController extends Controller
                             $cmpfinal = $comprimento * $divisaocom;
 
                         }
-                        $_path = $request->root().'/img/CROP/'.$imagename;
+                        $_path = $request->root().'/image/CROP/'.$imagename;
                         // Resized image
                         $thumb_img->resize($cmpfinal, $altfinal, function ($constraint) {
                             $constraint->aspectRatio();
                         });
                         // Canvas image
-                        $canvas = Image::canvas(870, 240);
+                        $canvas = Image::canvas(2048, 1447);
                         $canvas->insert($thumb_img, 'center');
-                        $canvas->save($destinationPath.'/'.$imagename,50);
+                        $canvas->save($destinationPath.'/'.$imagename,90);
                                     
            }
 
@@ -207,6 +207,8 @@ class PaginaController extends Controller
         $pagina->titulo      = $request->titulo;
         $pagina->subtitulo   = $request->subtitulo;
         $pagina->descricao   = $request->descricao;
+        $pagina->descricao1   = $request->descricao1;
+        $pagina->descricao2   = $request->descricao2;
         $pagina->link        = $request->link;
         $pagina->pathimg     = $_path;
         $pagina->ordem       = $request->ordem;

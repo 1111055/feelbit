@@ -19,9 +19,9 @@ class AboutController extends Controller
 
         $pageabout = Pagina::find(2);
 
-        $desc =  Desc::where('page_id','=','2')->orderBy('ordem','asc')->get();
-
-        return view('frontend.about', compact('pageabout','desc'));
+       // $desc =  Desc::where('page_id','=','2')->orderBy('ordem','asc')->get();
+        // dd($pageabout);
+        return view('frontend.about', compact('pageabout'));
     }
 
     /**

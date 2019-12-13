@@ -12,12 +12,22 @@
 			  @foreach($menu as $test) 
 	                  
                 <li>
-					<a href="#{{$test['path']}}">
+					<a href="#{{$test['path']}}" class="menuclick">
 						<span class="icon">
 							<i aria-hidden="true" class="{{$test['link']}}"></i>
 						</span>
 						<span>{{$test['menu']}}</span>
+				
 					</a>
+					<ul style="display: none;opacity: 0.70" >
+					    @foreach($test['submenutmp'] as $sub) 
+							<li style="width: 100% !important;">
+								<a href="{{route($sub['path'])}}" style="height: 2.5em; ">
+									<span>{{$sub['menu']}}</span>
+								</a>
+							</li>
+						@endforeach
+					</ul>
 				</li>
 	                       
 	           @endforeach

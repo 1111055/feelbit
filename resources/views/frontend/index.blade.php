@@ -22,7 +22,7 @@
 
 	            <div class="row gap">
 		            <div class="col-md-8 col-md-offset-2">
-		            	<img src="{{asset('/image/pub.jpg')}}" class="fade-up img-responsive" alt="Alt" />
+		            	<img src="{{$paginas[1]['pathimg']}}" class="fade-up img-responsive" alt="Alt" />
 		            </div>
 	            </div>
 

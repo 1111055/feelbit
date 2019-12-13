@@ -4,8 +4,17 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="Desenvolvemos soluções web com o principal foco no sucesso do negócio dos nossos clientes. Contacte-nos!">
+<meta name="title" content="Feelbit | Soluções Web">
+<meta name="author" content="FeelBit">
+<meta name="keywords" content="webdesign, web, design, institucional, eccomerce, dashboard, gestão. "/>
+<meta name="generator" content="Feelbit Dash">
+<meta name="robots" content="index, follow">
+<meta name="rating" content="general">
+<meta name="distribution" content="global">
+<meta name="expires" content="never">
+<meta name="Cache-Control" content="private">
+<meta name="revisit-after" content="3 days">
 <title>Feel Bit</title>
 <!-- Bootstrap Core CSS -->
 <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
@@ -36,16 +45,29 @@
 
 	<script src="{{asset('js/jquery.js')}}"></script>  
 	<script src="{{asset('js/modernizr.custom.js')}}"></script>   
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154453478-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-		<script type="text/javascript">
+  gtag('config', 'UA-154453478-1');
+
+
 	$(document).ready(function(){
 	  	jQuery('#headerwrap').backstretch([
 	      "image/bg/bg6.jpg"
 	    ], {duration: 4000, fade: 500});
 
+    	jQuery('#headerwraplap').backstretch([
+	      "image/bg/lap.jpg"
+	    ], {duration: 4000, fade: 500});
+
+
 		
 	});
-	</script>
+</script>
 
  
 </head>

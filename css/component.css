@@ -74,7 +74,9 @@ a, li {
 .nav li span {
 	display: block;
 }
-
+.nav li ul {
+	display: block;
+}
 .nav a {
 	display: block;
 	color: rgba(249, 249, 249, .9);

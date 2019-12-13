@@ -85,14 +85,12 @@ class MenuController extends Controller
                  ->get();
 
        $menustmp = Menu::
-                 where('submenu', '=', '')
-                 ->orWhereNull('submenu')
-                 ->orderBy('ordem','asc')->get();
+                 orderBy('ordem','asc')->get();
 
 
        $selmenu = $menustmp->pluck('menu','id');
 
-       
+      // dd($selmenu);
        $selmenu->prepend('-- Escolha um Submenu -- ',0);
 
        return view('backend.Menu.edit' , compact('menu','menus','selmenu'));

@@ -794,3 +794,10 @@ $( "#searchForm" ).submit(function( event ) {
     }
 });
 
+$('.menuclick').on('click', function(){
+ $('.menuclick').next( "ul" ).hide();
+
+  $(this).next( "ul" ).show();
+
+});
+
