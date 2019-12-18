@@ -14,6 +14,8 @@ use App\Expressoes;
 use App\Familia;
 Use Session;
 use Mail;
+use Analytics;
+
 
 class HomeController extends Controller
 {
@@ -45,7 +47,6 @@ class HomeController extends Controller
                }
       }
 
-   
       $paginas = Pagina::where('nome','!=',' ')->orderby("ordem","asc")->get();
 
 

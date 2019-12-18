@@ -23,12 +23,17 @@
     <script src="{{ asset('backend/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     
     <script src="{{ asset('backend/dist/js/adminlte.min.js') }}"></script>
+    <script src="{{ asset('backend/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
+     <script src="{{ asset('backend/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
 
 
     <script src="{{ asset('backend/bower_components/ckeditor/ckeditor.js') }}"></script>
     <script src="{{ asset('js/multiselect2.js') }}"></script>
+    <script src="{{ asset('js/dashboard.js') }}"></script>
     <script src="{{ asset('backend/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
     <script src="{{ asset('backend/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js') }}"></script>
+    <script src="{{ asset('backend/bower_components/chart.js/Chart.js') }}"></script>
+
     <script>
       $(function () {
         // Replace the <textarea id="editor1"> with a CKEditor

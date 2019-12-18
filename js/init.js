@@ -626,7 +626,7 @@ $( "#contact-form" ).submit(function( event ) {
 
    } 
 
-  /* if(!$('#termos').is(':checked') && erro == false){
+   if(!$('#termos').is(':checked') && erro == false){
 
       erro=true;
       $('#termos').focus();
@@ -637,7 +637,7 @@ $( "#contact-form" ).submit(function( event ) {
            setTimeout(function(){
               $("#errotermos").fadeOut();
             }, 2000);
-   }*/
+   }
 
   
    if(erro == false){
@@ -753,7 +753,7 @@ $( "#searchForm" ).submit(function( event ) {
             }, 2000);
    }
 
- /*  if(!$('#politica').is(':checked') && erro == false){
+   if(!$('#politica').is(':checked') && erro == false){
 
       erro=true;
       $('#politica').focus();
@@ -766,8 +766,7 @@ $( "#searchForm" ).submit(function( event ) {
             }, 2000);
    }
 
-   */
-
+  
      
    if(erro == false){
           var posting = $.post( url, { email: term, _token: crf } );

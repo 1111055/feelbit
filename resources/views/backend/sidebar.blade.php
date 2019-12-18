@@ -87,6 +87,7 @@
          <li><a href="{{route('social')}}"><i class="fa fa-facebook"></i> <span>Redes Sociais</span></a></li>
          <li><a href="{{route('prazo')}}"><i class="fa fa-truck"></i> <span>Prazos Transporte</span></a></li>
          <li><a href="{{route('newsletter')}}"><i class="fa fa-newspaper-o"></i> <span>Newsletters</span></a></li>
+         <li><a href="{{route('contactos')}}"><i class="fa fa-phone"></i> <span>Contactos</span></a></li>
          <li><a href="{{route('orcamento')}}"><i class="fa fa-newspaper-o"></i> <span>Pedidos Orçamentos</span></a></li>
          <li><a href="{{route('expressoes')}}"><i class="fa fa-y-combinator"></i> <span>Expressões</span></a></li>
          <li class="treeview">

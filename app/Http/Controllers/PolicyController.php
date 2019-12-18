@@ -15,11 +15,9 @@ class PolicyController extends Controller
      */
     public function index()
     {
-        $pagepolicy = Pagina::find(5);
+        $pagepolicy = Pagina::find(8);
 
-        $desc =  Desc::where('page_id','=','5')->orderBy('ordem','asc')->get();
-
-        return view('frontend.policy', compact('pagepolicy','desc'));
+        return view('frontend.policy', compact('pagepolicy'));
     }
 
     /**

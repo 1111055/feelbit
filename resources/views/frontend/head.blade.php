@@ -7,7 +7,7 @@
 <meta name="description" content="Desenvolvemos soluções web com o principal foco no sucesso do negócio dos nossos clientes. Contacte-nos!">
 <meta name="title" content="Feelbit | Soluções Web">
 <meta name="author" content="FeelBit">
-<meta name="keywords" content="webdesign, web, design, institucional, eccomerce, dashboard, gestão. "/>
+<meta name="keywords" content="feel bit, feel, bit, webdesign, web design, html, laravel, web, design, institucional, eccomerce, dashboard, gestão. "/>
 <meta name="generator" content="Feelbit Dash">
 <meta name="robots" content="index, follow">
 <meta name="rating" content="general">

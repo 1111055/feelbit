@@ -14,6 +14,9 @@
 //teste email..
 use Illuminate\Mail\Markdown;
 use App\Produto;
+use Spatie\Analytics\Period;
+
+//URL::forceScheme('https');
 
 Route::get('home/mailthanks', function () {
     $markdown = new Markdown(view(), config('mail.markdown'));
@@ -28,7 +31,11 @@ Route::get('testMail','HomeController@testMail');
 Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index')->name('home');
 
+Route::get('data', function () {
+$analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+dd($analyticsData);
 
+});
 //About Company
 Route::get('about', 'AboutController@index');
 Route::get('about', 'AboutController@index')->name('about');
@@ -76,6 +83,12 @@ Route::get('ask', 'QuestionController@index')->name('ask');
 //Checkout Products
 Route::get('dash', 'DashController@index');
 Route::get('dash', 'DashController@index')->name('dash');
+
+//graficos
+Route::get('dash/piechart', 'DashController@piechart')->name('piechart');
+Route::get('dash/piechart',           ['as' => 'dash.piechart',    'uses' => 'DashController@piechart']); 
+Route::get('dash/mapschar',           ['as' => 'dash.mapschar',    'uses' => 'DashController@mapschar']); 
+Route::get('dash/userschar',          ['as' => 'dash.userschar',  'uses' => 'DashController@userschar']); 
 
 //Social NetWork
 Route::get('social', 'SocialController@index');

@@ -113,9 +113,12 @@
 						<form method="post"  action="newsletter/teste" id="searchForm">
 							 <input name="crf" id="crf" type="hidden" value="{{csrf_token()}}">
 					      	<p><input type="text" class="form-control" name="email" id="email" placeholder="Email" /></p>
-
-							<div class="alert alert-danger" role="alert" id="alerterro" style="display: none;"></div>
-
+							      <div class="form-check">
+								    <p> <input type="checkbox" class="form-check-input" id="politica" name="politica">
+								    <label class="form-check-label" for="exampleCheck1">* Li e aceito a <a href="{{route('policy')}}" target="_blank" style="color: #FFFFFF !important;">Politica e Privacidade da FeelBit</a></label>
+								   	</p>
+								 </div>
+								<div class="alert alert-danger" role="alert" id="alerterro" style="display: none; background: #C24641 !important;"></div>
 							<input class="btn btn-outlined btn-primary btn-lg bounce-in" type="submit" name="submit" value="Enviar" />
 					    </form>
 					</div>
@@ -161,6 +164,18 @@
                          
                         </div>
 						<p><textarea name="desc" class="form-control" id="desc" placeholder="Discrição"></textarea></p>
+					
+						<div class="form-check">
+						 <p>   <input type="checkbox" class="form-check-input" id="termos" name="termos">
+						    <label class="form-check-label" for="exampleCheck1">* Li e aceito a <a href="{{route('policy')}}" target="_blank" style="color: black !important;">Politica e Privacidade da FeelBit</a></label>
+						 </p>
+						 <div class="col-md-12">
+                        
+                             <div class="alert alert-danger" role="alert" id="errotermos" style="display: none;"></div>
+                         
+                        </div>
+						
+						</div>
 						<p>{{$exp[8]['expression']}}</p>
 						<input class="btn btn-outlined btn-primary" type="submit" name="submit" id="sendcontact" value="Enviar" />
 					     <div class="fa-3x" style="display: none;" id="loaderorca">
