@@ -22,7 +22,7 @@
 					<ul style="display: none;opacity: 0.70" >
 					    @foreach($test['submenutmp'] as $sub) 
 							<li style="width: 100% !important;">
-								<a href="{{route($sub['path'])}}" style="height: 2.5em; ">
+								<a href="{{route($sub['path'],$sub['pagina'])}}" style="height: 2.5em; ">
 									<span>{{$sub['menu']}}</span>
 								</a>
 							</li>

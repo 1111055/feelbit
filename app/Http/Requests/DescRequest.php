@@ -45,6 +45,7 @@ class DescRequest extends FormRequest
             'link'         => request()->link,
             'titulo'       => request()->titulo,
             'descricao'    => request()->descricaodesc,
+            'descricao1'   => request()->descricao,
             'path'         => request()->path,
             'ordem'        => request()->ordem,
             'activo'       => 1

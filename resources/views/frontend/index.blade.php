@@ -17,7 +17,7 @@
 	        	<div class="centered gap fade-down section-heading">
 	                <h2 class="main-title">{{$paginas[1]['titulo']}}</h2>
 	                <hr>
-	              			  {!! $paginas[1]['descricao'] !!}
+	              			 <div class="textbody"> {!! $paginas[1]['descricao'] !!}</div>
 	            </div>
 
 	            <div class="row gap">
@@ -25,7 +25,7 @@
 		            	<img src="{{$paginas[1]['pathimg']}}" class="fade-up img-responsive" alt="Alt" />
 		            </div>
 	            </div>
-
+                <a class="btn btn-outlined btn-primary" type="button"  target="_blank" href="{{route('pagina.getPage',2)}}" style="margin-left: 46%">Ver Mais</a> 
 			</div>	
 	    </section>
 
@@ -34,7 +34,7 @@
 	        	<div class="centered gap fade-down section-heading">
 	                <h2 class="main-title">{{$paginas[3]['titulo']}}</h2>
 	                <hr>
-	              			{!! $paginas[3]['descricao'] !!}
+	              			<div class="textbody">{!! $paginas[3]['descricao'] !!}</div>
 	            </div>
 				<div class="row">
 
@@ -58,7 +58,7 @@
 		        	<div class="centered gap fade-down section-heading">
 		                <h2 class="main-title">{{$paginas[5]['titulo']}}</h2>
 		                <hr>
-		              {!! $paginas[5]['descricao'] !!}
+		              <div class="textbody">{!! $paginas[5]['descricao'] !!}</div>
 		            </div> 
 				</div><!-- row -->
 
@@ -82,7 +82,7 @@
 				<div class="centered gap fade-down section-heading">
 	                <h2 class="main-title">{{$paginas[2]['titulo']}}</h2>
 	                <hr>
-	                 {!! $paginas[2]['descricao'] !!}
+	                  <div class="textbody">{!! $paginas[2]['descricao'] !!}</div>
 	            </div> 
 			    <div class="row mt">
 			        @foreach($paginas[2]->desc as $k => $item)
@@ -101,18 +101,60 @@
 					      @endif  	
 			        @endforeach	
 			    </div>
+			    	<a class="btn btn-outlined btn-primary" type="button"  target="_blank" href="{{route('pagina.getPage',3)}}" style="margin-left: 46%">Ver Mais</a> 
 			</div>
 	    </section>
+
+	    <div class="row" >
+			<div class="container">
+
+				<div class="row">
+		        	<div class="centered gap fade-down section-heading">
+		                <h2 class="main-title">Sistema Integrado</h2>
+		                <hr>
+		              <div class="textbody">{!! $paginas[5]['descricao'] !!}</div>
+		            </div> 
+				</div><!-- row -->
+
+				<div class="row mt">
+
+					        <div class="col-md-6">
+					 
+					            <div class="blockquote-box fade-up clearfix">
+					                <div class="square pull-left">
+					                   <i class="fab fa-google fa-5x" aria-hidden="true"></i>
+					                </div>
+					                <h4>Google Analytics</h4>
+					                <p>Sistema integrado com o Google Analytics</p>
+					            </div>
+					  
+					        </div>  
+					        <div class="col-md-6">
+					 
+					            <div class="blockquote-box fade-up clearfix">
+					                <div class="square pull-left">
+					               <i class="fab fa-mailchimp fa-5x"></i>
+					                </div>
+					                <h4>Mail Chimp</h4>
+					                <p>Sistema integrado com o Mail Chimp</p>
+					            </div>
+					  
+					        </div>  
+			
+				</div>
+			</div>
+		</div>
+		
 
 		<div id="call">
 			<div class="container">
 				<div class="row fade-up">
 					<h3>{{$exp[0]['expression']}}</h3>
 					<div class="col-lg-8 col-lg-offset-2">
-						<p>{{$exp[1]['expression']}}</p>
+						<div class="textbody"><p>{{$exp[1]['expression']}}</p></div>
 						<form method="post"  action="newsletter/teste" id="searchForm">
 							 <input name="crf" id="crf" type="hidden" value="{{csrf_token()}}">
-					      	<p><input type="text" class="form-control" name="email" id="email" placeholder="Email" /></p>
+					      	<p><input type="text" class="form-control" name="email" id="emailnew" placeholder="Email" /></p>
 							      <div class="form-check">
 								    <p> <input type="checkbox" class="form-check-input" id="politica" name="politica">
 								    <label class="form-check-label" for="exampleCheck1">* Li e aceito a <a href="{{route('policy')}}" target="_blank" style="color: #FFFFFF !important;">Politica e Privacidade da FeelBit</a></label>
@@ -131,7 +173,7 @@
 	        	<div class="centered gap fade-down section-heading">
 	                <h2 class="main-title">{{$exp[2]['expression']}}</h2>
 	                <hr>
-	                <p>{{$exp[3]['expression']}}</p>
+	               <div class="textbody"> <p>{{$exp[3]['expression']}}</p></div>
 	            </div>
 			</div><!-- row -->
 		</div><!-- container -->
@@ -190,4 +232,8 @@
 	</div>
 
 
+@stop
+
+@section('scripts')
+     
 @stop

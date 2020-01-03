@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Desc extends Model
 {
     protected $fillable = [
-        'page_id', 'titulo', 'descricao','link', 'path','ordem', 'activo','class'
+        'page_id', 'titulo', 'descricao', 'descricao1', 'link', 'path','ordem', 'activo','class'
     ];
     
 

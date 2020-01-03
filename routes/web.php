@@ -54,6 +54,10 @@ Route::get('checkout', 'CheckoutController@index')->name('checkout');
 Route::get('wish', 'WishController@index');
 Route::get('wish', 'WishController@index')->name('wish');
 
+//Services
+Route::get('service', 'ServiceController@index');
+Route::get('service', 'ServiceController@index')->name('service');
+
 //detail produto
 Route::get('detail', 'DetailController@index');
 Route::get('detail', 'DetailController@index')->name('detail');
@@ -76,6 +80,8 @@ Route::get('policy', 'PolicyController@index')->name('policy');
 //Politica e Privacidade
 Route::get('ask', 'QuestionController@index');
 Route::get('ask', 'QuestionController@index')->name('ask');
+//Paginas
+Route::get('pagina/{id}',   ['as' => 'pagina.getPage',    'uses' => 'PaginaController@getPage']); 
 
 
 

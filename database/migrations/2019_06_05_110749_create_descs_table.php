@@ -18,6 +18,7 @@ class CreateDescsTable extends Migration
             $table->integer('page_id');
             $table->text('titulo')->nullable();
             $table->text('descricao')->nullable();
+            $table->text('descricao1')->nullable();
             $table->string('link')->nullable();
             $table->string('class')->nullable();
             $table->string('path')->nullable();

@@ -99,7 +99,7 @@ class BannerLinesController extends Controller
 
         if($request->hasFile('banerimg')) {
                        
-                            dd("Teste");
+                          
                         $photo = $request->file('banerimg');
                        
                       //  dd($photo);
@@ -166,8 +166,6 @@ class BannerLinesController extends Controller
 
                         $altura =   $height;
                         $comprimento = $width;
-
-                        dd("Teste");
 
                         $divisaoalt = $bn->height / $altura; 
                         $divisaocom = $bn->width / $comprimento;

@@ -20,6 +20,13 @@ class Menu extends Model
         return $valty;
     }
 
+
+    public function pagina(){
+
+        return $this->belongsTo('App\Pagina','link', 'id');
+    }
+
+
     public static function getAllMenu(){
 
     	$menus = Menu::
@@ -51,7 +58,14 @@ class Menu extends Model
                                                     }
                                             }
 
-                                        $cart2[] = array('menu' => $variabletmp['menu'], 'link' => $variabletmp['link'] ,'path' => $variabletmp['path'], 'id' => $variabletmp['id'],'submenutmp' => $cart3);
+                                         $pagina = 0;
+                                         
+                                         if($variabletmp['pagina']['id'] != null){
+
+                                            $pagina = $variabletmp['pagina']['id'];
+                                         }   
+
+                                        $cart2[] = array('menu' => $variabletmp['menu'], 'link' => $variabletmp['link'] ,'path' => $variabletmp['path'], 'id' => $variabletmp['id'],'submenutmp' => $cart3, 'pagina' => $pagina);
 
                                     }
 

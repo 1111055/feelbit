@@ -72,6 +72,8 @@ class DescController extends Controller
         
        $desc = Desc::find($id);
 
+       //dd($desc);
+
        return view('backend.Desc.edit' , compact('desc','idpage'));
     }
 
@@ -84,11 +86,14 @@ class DescController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $desc = Desc::find($id);
 
+
+        $desc = Desc::find($id);
+        //dd($desc);
 
         $desc->titulo=$request->titulo;
         $desc->descricao=$request->descricaodesc;
+        $desc->descricao1=$request->descricao;
         $desc->class=$request->class;
         $desc->activo = ($request->activo !== '' && $request->activo !== null ) ? 1 : 0;
 

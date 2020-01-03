@@ -15,7 +15,7 @@ class PaginaController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => ['getPage']]);
     }
 
     /**
@@ -41,6 +41,19 @@ class PaginaController extends Controller
     public function create()
     {
         //
+    }
+    
+    public function getPage($id)
+    {
+
+        $page = Pagina::find($id);
+         
+
+         //dd($page->pagina);
+         $pagelink = 'frontend.'.$page->link;
+
+         //dd($pagelink);
+        return view($pagelink, compact('page'));
     }
 
     /**

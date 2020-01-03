@@ -195,7 +195,7 @@ var datatmp;
   // -----------------
   // - SPARKLINE BAR -
   // -----------------
-  $('.sparkbar').each(function () {
+ /* $('.sparkbar').each(function () {
     var $this = $(this);
     $this.sparkline('html', {
       type    : 'bar',
@@ -229,5 +229,5 @@ var datatmp;
       fillColor: $this.data('fillcolor'),
       spotColor: $this.data('spotcolor')
     });
-  });
+  });*/
 });

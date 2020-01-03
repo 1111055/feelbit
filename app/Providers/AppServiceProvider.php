@@ -50,7 +50,7 @@ class AppServiceProvider extends ServiceProvider
 
 
 
-       // dd($menus);
+     //   dd($menus);
 
          //Session::put('menu', $cart); 
 

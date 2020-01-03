@@ -23,6 +23,7 @@ p {
     line-height: 1.8;
     margin-bottom: 25px;
     font-size: 16px;
+    text-align: justify;
 }
 
 .centered {
@@ -490,7 +491,7 @@ hr {
 }
 
 .portfolio-item .item-inner, .post .item-inner {
-    background: #fff;
+   /* background: #fff;*/
     padding: 0;
     margin: 0 20px 20px 0;
     position: relative;
@@ -857,6 +858,9 @@ hr {
 .body-push-toright #search-wrapper .container {
     margin: 0 5%;
 }
+.textbody > p{
+    text-align: center;
+}
 
 #search-wrapper input {
     width: 98%;
@@ -1021,13 +1025,15 @@ hr {
     position: absolute;
     display: block;
     z-index: 1;
-    -webkit-box-shadow:inset 0 0 200px 50px rgba(0,0,0,0.6);
-    box-shadow:inset 0 0 200px 50px rgba(0,0,0,0.6);
+    -webkit-box-shadow:inset 0 0 170px 50px rgba(0,0,0,0.6);
+    box-shadow:inset 0 0 170px 50px rgba(0,0,0,0.6);
 }
 
 .backstretch {
     width: 100% !important;
+    /*height: 170px !important;*/
 }
+
 
 #mapwrapper {
     width: 100%;

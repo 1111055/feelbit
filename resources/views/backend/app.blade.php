@@ -19,56 +19,30 @@
 
     <!-- jQuery 3 -->
     <script src="{{ asset('backend/bower_components/jquery/dist/jquery.min.js') }}"></script>
+
     <!-- Bootstrap 3.3.7 -->
     <script src="{{ asset('backend/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="{{ asset('backend/bower_components/jquery-ui/jquery-ui.min.js') }}"></script>
     
     <script src="{{ asset('backend/dist/js/adminlte.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
-     <script src="{{ asset('backend/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
+    <script src="{{ asset('backend/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
 
 
-    <script src="{{ asset('backend/bower_components/ckeditor/ckeditor.js') }}"></script>
+  
     <script src="{{ asset('js/multiselect2.js') }}"></script>
     <script src="{{ asset('js/dashboard.js') }}"></script>
     <script src="{{ asset('backend/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
     <script src="{{ asset('backend/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js') }}"></script>
     <script src="{{ asset('backend/bower_components/chart.js/Chart.js') }}"></script>
 
+
+    <script src="{{asset('backend/bower_components/moment/moment.js')}}"></script>
+    <script src="{{asset('backend/bower_components/fullcalendar/dist/fullcalendar.min.js')}}"></script>
+
     <script>
-      $(function () {
-        // Replace the <textarea id="editor1"> with a CKEditor
-        // instance, using default configuration.
-         CKEDITOR.replace('descricao')
-         CKEDITOR.replace('descricao1')
-         CKEDITOR.replace('descricao2')
-  
-        //bootstrap WYSIHTML5 - text editor
-        $('.textarea').wysihtml5()
-      })
 
-        $(document).ready(function() {
-            $(".btn-pref .btn").click(function () {
-                $(".btn-pref .btn").removeClass("btn-warning").addClass("btn-default");
-                // $(".tab").addClass("active"); // instead of this do the below 
-                $(this).removeClass("btn-default").addClass("btn-warning");   
-            });
-        });
-
-       $("#add").on('click', function () {
-             
-               var html = '<input type="text" name="titulo[]" id="titulo" class="form-control" /> <input type="text" name="titulo[]" id="titulo" class="form-control" /> </br>';
-         
-
-                $(".addlines").append(html);
-
-
-        });
-
-
-    //Colorpicker
-    $('.my-colorpicker1').colorpicker()
-    //color picker with addon
-    $('.my-colorpicker2').colorpicker()
 
 function validateform(este)
 {    
@@ -318,6 +292,7 @@ function isEmail(email) {
     });
 
     </script>
+       @yield('scripts')
 
     </body>
 </html>

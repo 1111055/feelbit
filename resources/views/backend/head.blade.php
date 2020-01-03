@@ -14,6 +14,12 @@
   <link rel="stylesheet" href="{{ asset('backend/bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css')}}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
   <link rel="stylesheet" href="{{ asset('css/multiselect.css') }}">
+
+
+    <!-- fullCalendar -->
+  <link rel="stylesheet" href="{{asset('backend/bower_components/fullcalendar/dist/fullcalendar.min.css')}}">
+  <link rel="stylesheet" href="{{asset('backend/bower_components/fullcalendar/dist/fullcalendar.print.min.css')}}" media="print">
+
  
 
 
